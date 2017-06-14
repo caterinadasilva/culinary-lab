@@ -6,6 +6,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+ }
+
+ /* Titles */
+
+ h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
  }
 
 /* Links */
@@ -62,10 +70,24 @@ body {
   height: 287px;
 }
 
+.masthead {
+  transition: .5s ease background-color;
+  background-color: rgba(34, 34, 34, 0);
+  padding: 15px;
+  z-index: 10;
+}
+
+.bg-menu {
+  background-color: rgba(34, 34, 34, 1);
+  color: #fff;
+}
+
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  overflow: hidden;
   text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 
@@ -89,8 +111,7 @@ body {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: #fff;
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
@@ -203,8 +224,7 @@ background: #030c17;
   transform: scale3d(1.4,1.4,1);
 }
 
-#people figure figcaption,
-#people figure figcaption > a {
+#people figure figcaption {
   position: absolute;
   top: 0;
   left: 0;
@@ -212,14 +232,15 @@ background: #030c17;
   height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-#people figure figcaption > a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
+#people figure figcaption .social-people {
   opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+#people figure:hover figcaption .social-people {
+  opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
 }
 
 #people figure h2 {
@@ -269,12 +290,79 @@ background: #030c17;
  /* 
  * Press
  */
+ .quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: #e84a64;
+  border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px;
+}
 /* 
  * News
  */
 /* 
  * Menu
  */
+ /* carousel */
+.menu-carousel {
+  margin-bottom: 0;
+  padding: 0 40px 30px 40px;
+  margin-top: 30px;
+}
+.menu-carousel .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+.menu-carousel .carousel-indicators li {
+  background: #c0c0c0;
+}
+.menu-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+.menu-carousel img
+{
+  width: 350px;
+  height: 200px
+}
+/* End carousel */
  /* 
  * Buy
  */

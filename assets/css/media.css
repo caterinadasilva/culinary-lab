@@ -12,7 +12,12 @@
     bottom: 0;
   }
   .mastfoot .inner {
-    padding-bottom: 0;
+        padding-bottom: 0;
+    position: absolute;
+    bottom: 3em;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
     /* Start the vertical centering */
   .site-wrapper-inner {
