@@ -51,15 +51,14 @@ h6 {
 /* Links */
 a,
 a:focus,
-a:hover {
+a:hover,
+button {
   transition: .5s ease all;
 }
 .btn {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
-
-/* Custom default button */
 .btn-default {
   color: #fff;
   text-shadow: none;
@@ -74,7 +73,31 @@ a:hover {
   color: #fff;
   background-color: rgba(255,255,255,.4);
 }
-
+.btn-default.inverted {
+  color: #000;
+  text-shadow: none;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 0;
+  font-size: 2rem;
+  padding: .5em 1em;
+}
+.btn-default.inverted:hover,
+.btn-default.inverted:focus {
+  color: #fff;
+  background-color: rgba(0,0,0,.4);
+}
+.btn-primary {
+  background-color: #c2b49a;
+  border-radius: 0;
+  border: none;
+  height: 45px;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: rgba(194,180,154,.5);
+  }
 
 /*
  * Base structure
@@ -169,6 +192,10 @@ body {
   border-bottom-color: #fff;
 }
 
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
@@ -387,27 +414,104 @@ body {
 }
 #fade-quote-carousel.carousel .carousel-indicators {
   bottom: 10px;
+  z-index: 0;
 }
 #fade-quote-carousel.carousel .carousel-indicators > li {
-  background-color: #e84a64;
+  background-color: #ccc;
   border: none;
 }
 #fade-quote-carousel blockquote {
-    text-align: center;
-    border: none;
+  text-align: center;
+  border: none;
 }
-#fade-quote-carousel .profile-circle {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 100px;
+#press .critic {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#press .critic .text {
+  overflow: hidden;
+}
+#press .critic .text .stars {
+  color: gold;
+}
+#press .critic .profile-circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 1em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#press .critic .profile-circle img {
+  width: 100%;
+  height: auto;
 }
 /* 
  * News
  */
+ #news {
+    padding: 5em 0;
+}
+#news .form-inline .form-control {
+    width: 70%;
+    height: 45px;
+    border-radius: 0;
+}
+#news .form-inline .form-group {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+/*
+ * Hours
+*/
+
+#hours {
+  background-image: url('../img/bg-pricing.jpg');
+  color: #fff;
+  display: table;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  padding: 7em 0;
+}
+#hours .box {
+  background-color: #fff;
+  color: #000;
+  overflow: hidden;
+  padding: 1em 5em;
+}
+ul.schedule {
+    border: 1px solid #ccc;
+    list-style: none;
+}
+ul.schedule li {
+    border-top: 1px solid #ccc;
+    padding: 1em;
+    font-style: italic;
+}
+ul.schedule li:first-child {
+    border-top: none;
+}
+#hours button {
+  margin-bottom: 1em;
+}
 /* 
  * Menu
  */
+#menu {
+  padding: 5em 0;
+}
+
  /* carousel */
 .menu-carousel {
   margin-bottom: 0;
@@ -432,15 +536,43 @@ body {
   width: 350px;
   height: 200px
 }
-/* End carousel */
+
  /* 
  * Buy
  */
+#buy {
+    padding: 3em 0;
+}
+#buy .lead {
+  font-size: 3rem;
+}
 /*
  * Footer
  */
-
-.mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+footer {
+  background-image: url('../img/bg-footer.jpg');
+  color: #fff;
+  display: table;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  padding: 7em 0;
+}
+footer > * {
+  opacity: .7;
+}
+footer .network {
+  padding: 7em 0;
+}
+footer a.social {
+    font-size: 300%;
+    color: #fff;
+    padding: .5em;
+}
+footer a.social:hover {
+    color: #c0b599;
 }

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Archivos bases proyecto de maquetación culinary-lab">
+	<meta name="description" content="Proyecto de maquetación culinary-lab">
 	<meta name="author" content="Caterina Da Silva">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:900" rel="stylesheet">
 	<!-- Bootstrap Latest compiled and minified CSS -->
@@ -290,7 +290,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+				<div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="5000">
 				  <!-- Carousel indicators -->
                   <ol class="carousel-indicators">
 				    <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
@@ -306,14 +306,16 @@
 								<div class="profile-circle">
 									<img src="assets/img/testimonial_1.jpg" alt="Food critic">
 								</div>
-								<h6>Jim Walker</h6>
-								<small>Food critic</small>
-								<div class="stars">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
+								<div class="text">
+									<h6>Jim Walker</h6>
+									<small>Food critic</small>
+									<div class="stars">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -325,14 +327,16 @@
 								<div class="profile-circle">
 									<img src="assets/img/testimonial_2.jpg" alt="Food critic">
 								</div>
-								<h6>Teitra Beoulved</h6>
-								<small>Food critic</small>
-								<div class="stars">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
+								<div class="text">
+									<h6>Teitra Beoulved</h6>
+									<small>Food critic</small>
+									<div class="stars">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -345,11 +349,13 @@
 <section id="news" class="bg-menu text-center">
 	<div class="container">
 		<div class="row">
-			<h2 class="border">Subscribe to our newsletter</h2>
-			<div class="form-group">
-				<input type="mail" placeholder="Email address...">
-				<button type="submit" class="btn btn-primary btn-lg">SUBSCRIBE!</button>
+			<h3 class="border">Subscribe to our newsletter!</h3>
+			<form class="form-inline">
+				<div class="form-group">
+				<input type="mail" class="form-control" placeholder="Email address...">
+				<button class="btn btn-primary btn-lg">SUBSCRIBE!</button>
 			</div>
+			</form>
 		</div>
 	</div><!-- fin container -->
 </section>
@@ -363,34 +369,40 @@
 		</div>
 		<div class="row text-center">
 			<div class="col-xs-12 col-sm-4">
-				<h3>Breakfast</h3>
-				<ul class="schedule text-center">
-					<li>Mon - Thu: 7am - 11am</li>
-					<li>Fri: 7am - 12am</li>
-					<li>Sat: 7am - 3pm</li>
-					<li>Sun: All Day</li>
-				</ul>
-				<button class="btn btn-default">Book now</button>
+				<div class="box">	
+					<h3 class="border">Breakfast</h3>
+					<ul class="schedule text-center border">
+						<li>Mon - Thu: 7am - 11am</li>
+						<li>Fri: 7am - 12am</li>
+						<li>Sat: 7am - 3pm</li>
+						<li>Sun: All Day</li>
+					</ul>
+					<button class="btn btn-default inverted">Book now</button>
+				</div>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<h3>Lunch</h3>
-				<ul class="schedule text-center">
-					<li>Mon - Thu: 7am - 11am</li>
-					<li>Fri: 7am - 12am</li>
-					<li>Sat: 7am - 3pm</li>
-					<li>Sun: All Day</li>
-				</ul>
-				<button class="btn btn-default">Book now</button>
+				<div class="box">
+					<h3 class="border">Lunch</h3>
+					<ul class="schedule text-center border">
+						<li>Mon - Thu: 7am - 11am</li>
+						<li>Fri: 7am - 12am</li>
+						<li>Sat: 7am - 3pm</li>
+						<li>Sun: All Day</li>
+					</ul>
+					<button class="btn btn-default inverted">Book now</button>
+				</div>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<h3>Dinner</h3>
-				<ul class="schedule text-center">
-					<li>Mon - Thu: 7am - 11am</li>
-					<li>Fri: 7am - 12am</li>
-					<li>Sat: 7am - 3pm</li>
-					<li>Sun: All Day</li>
-				</ul>
-				<button class="btn btn-default">Book now</button>
+				<div class="box">
+					<h3 class="border">Dinner</h3>
+					<ul class="schedule text-center border">
+						<li>Mon - Thu: 7am - 11am</li>
+						<li>Fri: 7am - 12am</li>
+						<li>Sat: 7am - 3pm</li>
+						<li>Sun: All Day</li>
+					</ul>
+					<button class="btn btn-default inverted">Book now</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -403,23 +415,23 @@
 		</div>
 		<div class='row'>
 		    <div class='col-md-12'>
-				<div class="carousel slide menu-carousel" id="menu" data-ride="carousel" data-interval="3000">
+				<div class="carousel slide menu-carousel" data-ride="carousel" data-interval="3000">
 					<div class="carousel-inner">
 						<div class="item  active">
 							<div class="row">
 								<div class="col-md-4">
 									<a class="thumbnail" href="#">
-										<img alt="" src="http://placehold.it/150x150">
+										<img alt="" src="assets/img/menu_1.jpg">
 									</a>
 								</div>          
 								<div class="col-md-4">
 									<a class="thumbnail" href="#">
-										<img alt="" src="http://placehold.it/150x150">
+										<img alt="" src="assets/img/menu_2.jpg">
 									</a>
 								</div>
 								<div class="col-md-4">
 									<a class="thumbnail" href="#">
-										<img alt="" src="http://placehold.it/150x150">
+										<img alt="" src="assets/img/menu_3.jpg">
 									</a>
 								</div>        
 							</div>
@@ -428,17 +440,17 @@
 							<div class="row">
 								<div class="col-md-4">
 									<a class="thumbnail" href="#">
-										<img alt="" src="http://placehold.it/150x150">
+										<img alt="" src="assets/img/menu_4.jpg">
 									</a>
 								</div>          
 								<div class="col-md-4">
 									<a class="thumbnail" href="#">
-										<img alt="" src="http://placehold.it/150x150">
+										<img alt="" src="assets/img/menu_5.jpg">
 									</a>
 								</div>
 								<div class="col-md-4">
 									<a class="thumbnail" href="#">
-										<img alt="" src="http://placehold.it/150x150">
+										<img alt="" src="assets/img/menu_6.jpg">
 									</a>
 								</div>        
 							</div>
@@ -460,7 +472,7 @@
 </section>
 <footer>
 	<div class="container">
-		<div class="row">
+		<div class="row text-center">
 			<div class="col-xs-12 col-sm-4">
 				<h3><i class="fa fa-phone" aria-hidden="true"></i> Call</h3>
 				<p class="lead">555 - 213 - 4567</p>
@@ -474,14 +486,14 @@
 				<p class="lead">mail@example.com</p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row text-center network">
 			<div class="col-xs-12">
 				<a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 				<a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 				<a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row text-center">
 			<div class="col-xs-12">
 				<p>&copy <script type="text/javascript">
   document.write(new Date().getFullYear());
