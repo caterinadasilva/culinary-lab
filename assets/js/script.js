@@ -24,18 +24,11 @@
 })();
 
 $(document).ready(function() {
-  $('#media').carousel({
+  $('#people').carousel({
     pause: true,
     interval: false,
   });
 });
-$(document).ready(function() {
-  $('#media-xs').carousel({
-    pause: true,
-    interval: false,
-  });
-});
-
 $(document).ready(function() {
   $('#menu').carousel({
     pause: true,
