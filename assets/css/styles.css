@@ -14,7 +14,39 @@
  h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  position: relative;
  }
+h2 {
+  font-size: 6rem;
+}
+h3 {
+  font-size: 3.5rem;
+}
+h4 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.5rem;
+}
+.border {
+  margin-bottom: 60px;
+  position: relative;
+}
+.border:after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 5px;
+  border-top: 1px solid #c0b599;
+  border-bottom: 1px solid #c0b599;
+  bottom: -30px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
 
 /* Links */
 a,
@@ -22,15 +54,25 @@ a:focus,
 a:hover {
   transition: .5s ease all;
 }
+.btn {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
 
 /* Custom default button */
-.btn-default,
+.btn-default {
+  color: #fff;
+  text-shadow: none;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+  font-size: 2rem;
+  padding: .5em 1em;
+}
 .btn-default:hover,
 .btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+  color: #fff;
+  background-color: rgba(255,255,255,.4);
 }
 
 
@@ -158,33 +200,54 @@ body {
 /* 
  * Values
  */
-
+#values {
+    padding: 10em 0;
+}
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid;
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+#values li {
+    line-height: 250%;
+    font-size: 125%;
+}
 /* 
  * Hero
  */
 #hero {
   background-image: url('../img/bg-quote.jpg');
+  padding: 15em 0;
+}
+#hero .quote {
+  font-size: 5rem;
 }
 
 /* 
  * People
  */
-/* Common style */
+ #people {
+  padding: 10em 0;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
 #people figure {
   position: relative;
   float: left;
   overflow: hidden;
   margin: 10px 1%;
-  min-width: 320px;
+  min-width: 100%;
   max-width: 480px;
-  max-height: 360px;
-  width: 48%;
+  max-height: 400px;
   height: auto;
-background: #030c17;
+  background: #030c17;
   text-align: center;
   cursor: pointer;
 }
-
 #people figure img {
   position: relative;
   display: block;
@@ -194,7 +257,6 @@ background: #030c17;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
-
 #people figure figcaption {
   padding: 2em;
   color: #fff;
@@ -203,7 +265,6 @@ background: #030c17;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 #people figure figcaption::before,
 #people figure figcaption::after {
   pointer-events: none;
@@ -223,7 +284,6 @@ background: #030c17;
   -webkit-transform: scale3d(1.4,1.4,1);
   transform: scale3d(1.4,1.4,1);
 }
-
 #people figure figcaption {
   position: absolute;
   top: 0;
@@ -231,7 +291,6 @@ background: #030c17;
   width: 100%;
   height: 100%;
 }
-
 #people figure figcaption .social-people {
   opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -242,30 +301,24 @@ background: #030c17;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
-
-#people figure h2 {
+#people figure h4 {
   word-spacing: -0.15em;
   font-weight: 300;
   margin: 20% 0 10px 0;
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
 }
-#people figure:hover h2 {
+#people figure:hover h4 {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
-#people figure h2 span {
-  font-weight: 800;
+#people figure h4 {
+  margin-top: 4em;
 }
-
-#people figure h2,
 #people figure p {
-  margin: 0;
-}
-
-#people figure p {
+  font-style: italic;
+  margin-top: 1em;
   letter-spacing: 1px;
-  font-size: 68.5%;
   padding: 1em;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -279,23 +332,40 @@ background: #030c17;
   -webkit-transform: scale3d(1,1,1);
   transform: scale3d(1,1,1);
 }
-
 #people figure:hover figcaption {
   background-color: rgba(58,52,42,0);
 }
-
 #people figure:hover img {
   opacity: 0.4;
+}
+#people .social-people a {
+  color: #fff;
+  padding: .5em;
+}
+#people .carousel-control {
+      background-image: none;
+    width: 40px;
+    height: 70px;
+    background-color: rgba(255,255,255,.3);
+    padding: 20px 15px;
+    font-size: 50px;
+    line-height: 20px;
+    top: 45%;
 }
  /* 
  * Press
  */
- .quote {
-    color: rgba(0,0,0,.1);
-    text-align: center;
-    margin-bottom: 30px;
+#press {
+    padding: 10em 0;
+    height: 100vh;
 }
-
+#press h3 {
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 140%;
+    width: 90%;
+}
 /*-------------------------------*/
 /*    Carousel Fade Transition   */
 /*-------------------------------*/
