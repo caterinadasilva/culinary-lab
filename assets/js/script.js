@@ -14,6 +14,14 @@
 		lastScrollTop = currentScroll;
 	}, false);
 })();
+(function menuResponsive() {
+	var btnMenu = document.getElementById('btn-menu');
+	var list = document.getElementById('list-menu');
+	btnMenu.addEventListener("click", function(event){
+		event.preventDefault();
+		list.classList.toggle('hidden-xs');
+	})	
+})();
 
 $(document).ready(function() {
   $('#media').carousel({
